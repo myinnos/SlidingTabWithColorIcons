@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <in.myinnos.customimagetablayout.ChangeColorTab
+        android:id="@+id/tabChangeColorTab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <in.myinnos.customimagetablayout.ChangeColorItem
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            tab:item_icon="@drawable/ic_one"
+            tab:item_icon_color="#ff45c01a"
+            tab:item_tab_color="@color/colorPrimary"
+            tab:item_tab_position="bottom"
+            tab:item_text="message"
+            tab:item_text_color="@color/colorPrimaryDark"
+            tab:item_text_size="12sp" />
+
+        <in.myinnos.customimagetablayout.ChangeColorItem
+            android:id="@+id/id_indicator_two"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            tab:item_icon="@drawable/ic_two"
+            tab:item_icon_color="@color/colorAccent"
+            tab:item_tab_position="top"
+            tab:item_text="contact"
+            tab:item_text_size="12sp" />
+
+        <in.myinnos.customimagetablayout.ChangeColorItem
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            tab:item_icon="@drawable/ic_three"
+            tab:item_icon_color="@color/colorPrimary"
+            tab:item_tab_position="top"
+            tab:item_text="mail"
+            tab:item_text_color="@color/colorPrimary"
+            tab:item_text_size="12sp" />
+
+        <in.myinnos.customimagetablayout.ChangeColorItem
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            tab:item_icon="@drawable/ic_four"
+            tab:item_icon_color="#ffC2185B"
+            tab:item_tab_color="#ffC2185B"
+            tab:item_tab_position="top"
+            tab:item_text="favorite"
+            tab:item_text_color="@color/colorAccent"
+            tab:item_text_size="12dp" />
+
+    </in.myinnos.customimagetablayout.ChangeColorTab>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabChangeColorTab" />
+</RelativeLayout>
