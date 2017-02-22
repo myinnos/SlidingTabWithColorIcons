@@ -24,7 +24,81 @@ And then in the other gradle file(may be your app gradle or your own module libr
 
 How to use
 -----
-**Step 1:** update soon ...:
+**Step 1:** create layout:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <in.myinnos.customimagetablayout.ChangeColorTab
+        android:id="@+id/tabChangeColorTab"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <in.myinnos.customimagetablayout.ChangeColorItem
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            tab:item_icon="@drawable/ic_one"
+            tab:item_icon_color="#ff45c01a"
+            tab:item_tab_color="@color/colorPrimary"
+            tab:item_tab_position="bottom"
+            tab:item_text="message"
+            tab:item_text_color="@color/colorPrimaryDark"
+            tab:item_text_size="12sp" />
+	    
+	    ...
+
+    </in.myinnos.customimagetablayout.ChangeColorTab>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabChangeColorTab" />
+</RelativeLayout>
+```
+**Step 2:** set view pager to ChangeColorTab:
+```
+ViewPager mViewPager = (ViewPager) findViewById(R.id.viewpager);
+ChangeColorTab changeColorTab = (ChangeColorTab) findViewById(R.id.tabChangeColorTab);
+changeColorTab.setViewpager(mViewPager);
+//Attach page Adapter
+mViewPager.setAdapter(<YOUR_VIEW_PAGE_ADAPTER>);
+```
+Features
+-----
+- Set Tab Icon:
+```xml
+ tab:item_icon="@drawable/ic_one"
+```
+- Change Icon Color:
+```xml
+ tab:item_icon_color="#ff45c01a"
+```
+- Change Tab Color:
+```xml
+ tab:item_tab_color="@color/colorPrimary"
+```
+- Change Tab Line Position (bottom|top):
+```xml
+ tab:item_tab_position="bottom"
+```
+- Set Text (no need text simply skip this):
+```xml
+ tab:item_text="message"
+```
+- Change Text Color:
+```xml
+ tab:item_text_color="@color/colorPrimaryDark"
+```
+- Change Text Size:
+```xml
+ tab:item_text_size="12sp"
+```
 
 ##### Any Queries? or Feedback, please let me know by opening a [new issue](https://github.com/myinnos/SlidingTabWithColorIcons/issues/new)!
 
