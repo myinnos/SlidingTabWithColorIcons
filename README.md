@@ -8,24 +8,24 @@ Sliding Tab With Color Icons!
 #### Kindly use the following links to use this library:
 
 In build.gradle (Project)
-
-	allprojects {
-		repositories {
-			...
-			maven { url "https://jitpack.io" }
-		}
+```java
+allprojects {
+	repositories {
+	...
+		maven { url "https://jitpack.io" }
 	}
-	
+}
+```
 And then in the other gradle file(may be your app gradle or your own module library gradle, but never add in both of them to avoid conflict.)
-	
-	 dependencies {
-	        compile 'com.github.myinnos:SlidingTabWithColorIcons:1.0'
-	        }
-
+```java	
+ dependencies {
+	compile 'com.github.myinnos:SlidingTabWithColorIcons:1.0'
+	}
+```
 How to use
 -----
 **Step 1:** create layout:
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tab="http://schemas.android.com/apk/res-auto"
@@ -62,7 +62,7 @@ How to use
 </RelativeLayout>
 ```
 **Step 2:** set view pager to ChangeColorTab:
-```
+```java
 ViewPager mViewPager = (ViewPager) findViewById(R.id.viewpager);
 ChangeColorTab changeColorTab = (ChangeColorTab) findViewById(R.id.tabChangeColorTab);
 changeColorTab.setViewpager(mViewPager);
